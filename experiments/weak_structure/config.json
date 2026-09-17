@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "experiment": "Weak-structure detectability under denoising-strength mismatch",
+  "model_path": "data/models/drunet_color.pth",
+  "output_dir": "outputs/weak_structure",
+  "device": "cpu",
+  "workers": 8,
+  "scoring_workers": 16,
+  "inference_threads": 1,
+  "seeds": {
+    "geometry": 2026091601,
+    "noise": 2026091602,
+    "bootstrap": 2026091603,
+    "torch": 2026091604
+  },
+  "splits": {
+    "development": 2,
+    "validation": 40,
+    "test": 100
+  },
+  "noise_repeats": 3,
+  "sigma255": [
+    15,
+    25
+  ],
+  "strengths": [
+    1.0,
+    1.5,
+    2.0
+  ],
+  "geometry": {
+    "size": 256,
+    "supersampling": 8,
+    "background": [
+      0.35,
+      0.65
+    ],
+    "line_count": [
+      3,
+      6
+    ],
+    "width": [
+      1.0,
+      3.0
+    ],
+    "contrast": [
+      0.03,
+      0.12
+    ],
+    "length": [
+      70.0,
+      190.0
+    ],
+    "curvature_fraction": [
+      -0.35,
+      0.35
+    ],
+    "center_margin": 24,
+    "curve_samples": 1024,
+    "structure_threshold": 0.5,
+    "core_threshold": 0.75,
+    "boundary": 12,
+    "side_distance": [
+      3.0,
+      6.0
+    ],
+    "other_line_clearance": 8.0,
+    "background_clearance": 10.0,
+    "minimum_core_pixels": 20,
+    "minimum_side_pixels": 40,
+    "minimum_background_pixels": 1000
+  },
+  "detector": {
+    "name": "skimage.filters.sato",
+    "sigmas": [
+      1,
+      2,
+      3
+    ],
+    "black_ridges": false,
+    "mode": "reflect",
+    "cval": 0
+  },
+  "gray": "float64 RGB arithmetic mean, no image normalization",
+  "eta_grid": {
+    "start": 0,
+    "stop": 100,
+    "denominator": 100
+  },
+  "betas": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "controller": {
+    "epsilon": 1e-08,
+    "steps": 28,
+    "audit_tolerance": 1e-12
+  },
+  "selection": {
+    "metric": "macro mean AP",
+    "condition_weights": "equal sigma/a; equal geometry; equal noise repeat",
+    "tie_tolerance": 1e-12,
+    "tie_break": "smallest parameter",
+    "clean_ap_warning_threshold": 0.7
+  },
+  "development_operating_points": {
+    "eta": 0.5,
+    "beta": 0.6
+  },
+  "statistics": {
+    "bootstrap_repeats": 10000,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "cluster": "clean geometry",
+    "primary": "selected TV minus proposal overall macro AP",
+    "fixed_comparison_equivalence_margin_ap": 0.01
+  },
+  "visualization": {
+    "example_ids": [
+      "test_000",
+      "test_001",
+      "test_002"
+    ],
+    "noise_repeat": 0,
+    "sigma255": 25,
+    "strength": 2.0,
+    "gray_limits": [
+      0,
+      1
+    ],
+    "response_limits": [
+      0,
+      0.06
+    ],
+    "contact_sheet_cases_per_page": 12
+  }
+}
