@@ -1,0 +1,21 @@
+{
+  "width_mm": 178,
+  "height_mm": 110,
+  "min_normal_font": 9.2,
+  "sample": "kodim23",
+  "beta": 0.6,
+  "eta": 0.6633879244327545,
+  "audit": {
+    "V_f": 0.32876029084654773,
+    "V_v": 0.049997480761586686,
+    "V_u": 0.13150413862231275,
+    "B": 0.19725616850792863,
+    "R": 0.19725615222423498,
+    "signed_residual": -1.628369364348181e-08,
+    "positive_residual": 0.0,
+    "accepted_under_tau": true,
+    "finite_status": "finite"
+  },
+  "geometry_eta_float64": 0.6633879514799197,
+  "curve": "float64 real segment; zero-tolerance boundary differs from retained float32 eta_L"
+}

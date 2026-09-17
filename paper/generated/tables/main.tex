@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Test results with DRUNet proposals. $\widetilde\eta$ is median adaptive retention. PSNR (dB) and SSIM are per-image means; $\Delta$PSNR is adaptive minus fixed, with paired 95\% intervals. Both methods have zero test violations.}
+\label{tab:main}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+&&\multicolumn{3}{c}{Adaptive blend}&\multicolumn{2}{c}{Fixed blend}&\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}
+Dataset&$\beta$&$\widetilde\eta$&PSNR&SSIM&$\eta$&PSNR / SSIM&$\Delta$PSNR [95\% CI]\\
+\midrule
+Kodak&0.2&0.225&22.44&0.446&0.210&22.28 / 0.439&$0.17\,[0.12,0.21]$\\
+&0.4&0.453&25.02&0.553&0.420&24.56 / 0.533&$0.46\,[0.35,0.58]$\\
+&0.6&0.689&28.35&0.709&0.640&27.56 / 0.672&$0.79\,[0.60,0.99]$\\
+&0.8&0.953&31.52&0.877&0.865&30.90 / 0.844&$0.62\,[0.50,0.74]$\\
+\midrule
+PolyU&0.2&0.419&37.13&0.949&0.235&36.60 / 0.938&$0.53\,[0.43,0.64]$\\
+&0.4&0.933&37.75&0.962&0.480&37.43 / 0.955&$0.32\,[0.16,0.46]$\\
+&0.6&1.000&37.93&0.964&0.750&37.98 / 0.965&$-0.06\,[-0.17,0.06]$\\
+&0.8&1.000&37.96&0.965&0.910&38.04 / 0.966&$-0.07\,[-0.12,-0.03]$\\
+\bottomrule
+\end{tabular*}
+\end{table*}

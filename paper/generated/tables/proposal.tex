@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Kodak proposal sensitivity at $\sigma=25/255$. Adaptive violations are zero. DRUNet results are in Table~\ref{tab:main}.}
+\label{tab:proposal}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+Proposal&$\beta$&$\widetilde\eta$&PSNR&$\Delta$PSNR [95\% CI]\\
+\midrule
+Wavelet&0.2&0.227&22.18&$0.15\,[0.11,0.19]$\\
+Wavelet&0.6&0.707&25.91&$0.37\,[0.29,0.45]$\\
+NLM&0.2&0.234&22.33&$0.17\,[0.14,0.20]$\\
+NLM&0.6&0.707&26.89&$0.47\,[0.39,0.55]$\\
+\bottomrule
+\end{tabular*}
+\end{table}
