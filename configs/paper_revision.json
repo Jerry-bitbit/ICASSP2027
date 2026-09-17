@@ -1,0 +1,23 @@
+{
+  "source_filename": "ICASSP2027_final (1).pdf",
+  "sha256": "06c3792aa48575749237e16dbc46148760e080a0953fef7d6f4495ca6bc21d66",
+  "pages": 6,
+  "reference_pdf": "paper/manuscript.pdf",
+  "section": "3.3. Weak-Structure Detectability under Denoising Mismatch",
+  "figures": {
+    "1": "ICASSP_Overview_Technical.pdf",
+    "2": "geometry.pdf",
+    "3": "visual_single_column.pdf",
+    "4": [
+      "test_robustness.pdf",
+      "test_tradeoff.pdf"
+    ],
+    "5": "precision.pdf"
+  },
+  "tables": [
+    "main.tex",
+    "noise.tex",
+    "proposal.tex"
+  ],
+  "additional_diagnostic": "controllers.pdf"
+}

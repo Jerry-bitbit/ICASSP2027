@@ -1,0 +1,45 @@
+{
+  "dataset": "Kodak24 resized to max side 256",
+  "sigma255": 25.0,
+  "seed": 0,
+  "validation_images": [
+    "kodim01",
+    "kodim02",
+    "kodim03",
+    "kodim04",
+    "kodim05",
+    "kodim06",
+    "kodim07",
+    "kodim08"
+  ],
+  "test_images": [
+    "kodim09",
+    "kodim10",
+    "kodim11",
+    "kodim12",
+    "kodim13",
+    "kodim14",
+    "kodim15",
+    "kodim16",
+    "kodim17",
+    "kodim18",
+    "kodim19",
+    "kodim20",
+    "kodim21",
+    "kodim22",
+    "kodim23",
+    "kodim24"
+  ],
+  "betas": [
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "fixed_eta_grid_step": 0.005,
+  "bisection_steps": 28,
+  "tv_dtype": "float64",
+  "bootstrap": "image-level, 10000 resamples"
+}
